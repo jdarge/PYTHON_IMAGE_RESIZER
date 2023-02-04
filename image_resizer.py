@@ -1,4 +1,4 @@
-# assumes images are grouped into appropriate folders already
+# assumes images are grouped into appropriate folders already and is in the root directory alongside the image folders
 # i.e TYPEA/TYPEA_1.png
 
 import os 
