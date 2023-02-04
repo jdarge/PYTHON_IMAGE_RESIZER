@@ -1,19 +1,25 @@
-import os
-from PIL import Image
+# assumes images are grouped into appropriate folders already
+# i.e TYPEA/TYPEA_1.png
 
-# os.system('mkdir img; cp images/*/google/* img/')
+import os 
+from PIL import Image 
 
-directory = 'img'
-size = 64
-count = 0
+size = 1024
+folders = os.listdir('.')
 
-for filename in os.listdir(directory):
-    f = os.path.join(directory, filename)
-    if os.path.isfile(f):
-        image = Image.open(f)
-        image_resize = image.resize((SIZE,SIZE))
-        image_resize.save(f)
-    count += 1
-    print(count)
-
-print('DONE')
+for folder in folders:
+    print(f'FOLDER: {folder}')
+    try:
+        images = os.listdir(folder+'/')
+    except Exception as e: 
+        continue
+    for image in images: 
+        print(f'\t{image}')
+        file = folder+'/'+image
+        if os.path.isfile(file): 
+            try: 
+                f = Image.open(file)
+                f = f.resize((size,size)) 
+                f.save(file)
+            except Exception as e: 
+                print(f'\n{e}\n')
