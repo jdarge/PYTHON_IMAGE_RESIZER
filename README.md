@@ -1,5 +1,4 @@
-# PYTHON_IMAGE_RESIZER
-current code assumes every image will be in ./img
-
-todo:
-1. 
+Order matters here
+1. Download
+2. Square
+3. Resize
