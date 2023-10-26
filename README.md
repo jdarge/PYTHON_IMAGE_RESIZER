@@ -1,5 +1,6 @@
-# PYTHON_IMAGE_RESIZER
-current code assumes every image will be in ./img
+Order matters here
+1. Download
+2. Square
+3. Resize
 
-todo:
-1. 
+<br>Note: use gbif to generate Links.csv
